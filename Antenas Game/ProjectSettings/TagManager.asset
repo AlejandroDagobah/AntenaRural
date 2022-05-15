@@ -10,6 +10,7 @@ TagManager:
   - ImfectionBar
   - BuildingPlace
   - Building
+  - Quad
   layers:
   - Default
   - TransparentFX
