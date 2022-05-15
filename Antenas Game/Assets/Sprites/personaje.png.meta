@@ -4,85 +4,85 @@ TextureImporter:
   internalIDToNameTable:
   - first:
       213: 8778386249900385398
-    second: personaje_down-1
+    second: walk-1-d
   - first:
       213: -5415567900095415518
-    second: personaje_up-1
+    second: walk-1-u
   - first:
       213: 8695435578320395834
-    second: personaje_left-1
+    second: walk-1-r
   - first:
       213: -4536776124688858940
-    second: personaje_right-1
+    second: right-walk-1
   - first:
       213: -1064255096307472139
-    second: personaje_down-2
+    second: walk-2-d
   - first:
       213: -800414246181143438
-    second: personaje_up-2
+    second: walk-2-u
   - first:
       213: -3965268385570505424
-    second: personaje_left-2
+    second: walk-2-r
   - first:
       213: -3779356466112795704
-    second: personaje_right-2
+    second: right-walk-2
   - first:
       213: -3857273594836991835
-    second: personaje_down-3
+    second: walk-3-d
   - first:
       213: 3784073141406135343
-    second: personaje_up-3
+    second: walk-3-u
   - first:
       213: -5669405323651632485
-    second: personaje_left-3
+    second: walk-3-r
   - first:
       213: 5660429689113642701
-    second: personaje_right-3
+    second: right-walk-3
   - first:
       213: -7886955550143506323
-    second: personaje_down-4
+    second: walk-4-d
   - first:
       213: -5840949327509877221
-    second: personaje_up-4
+    second: walk-4-u
   - first:
       213: -1376493497707675386
-    second: personaje_left-4
+    second: walk-4-r
   - first:
       213: 654141082671533086
-    second: personaje_right-4
+    second: right-walk-4
   - first:
       213: -4869421790860956900
-    second: personaje_down-5
+    second: walk-5-d
   - first:
       213: 8106616488882840603
-    second: personaje_up-5
+    second: walk-5-u
   - first:
       213: 7178178887136969976
-    second: personaje_left-5
+    second: walk-5-r
   - first:
       213: 1107551694098412780
-    second: personaje_right-5
+    second: right-walk-5
   - first:
       213: 8008977726062806645
-    second: personaje_down-6
+    second: walk-6-d
   - first:
       213: -8393323704339284334
-    second: personaje_up-6
+    second: walk-6-u
   - first:
       213: -6210549298353261958
-    second: personaje_left-6
+    second: walk-6-r
   - first:
       213: -6075663504287512536
-    second: personaje_right-6
+    second: right-walk-6
   - first:
       213: 8928804197269053588
-    second: jump_1
+    second: jump
   - first:
       213: 2910698026585073425
-    second: jump_2
+    second: jump-2
   - first:
       213: -4551670855199139953
-    second: jump_3
+    second: jump-3
   - first:
       213: 141823005643320414
     second: jump-4
@@ -175,13 +175,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: personaje_down-1
+      name: walk-1-d
       rect:
         serializedVersion: 2
         x: 0
-        y: 768
-        width: 128
-        height: 128
+        y: 96
+        width: 16
+        height: 16
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -196,13 +196,13 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: personaje_up-1
+      name: walk-1-u
       rect:
         serializedVersion: 2
-        x: 127
-        y: 768
-        width: 128
-        height: 128
+        x: 16
+        y: 96
+        width: 16
+        height: 16
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -217,13 +217,13 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: personaje_left-1
+      name: walk-1-r
       rect:
         serializedVersion: 2
-        x: 257
-        y: 768
-        width: 128
-        height: 128
+        x: 32
+        y: 96
+        width: 16
+        height: 16
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -238,13 +238,13 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: personaje_right-1
+      name: right-walk-1
       rect:
         serializedVersion: 2
-        x: 384
-        y: 768
-        width: 128
-        height: 128
+        x: 48
+        y: 96
+        width: 16
+        height: 16
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -259,13 +259,13 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: personaje_down-2
+      name: walk-2-d
       rect:
         serializedVersion: 2
         x: 0
-        y: 640
-        width: 128
-        height: 128
+        y: 80
+        width: 16
+        height: 16
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -280,13 +280,13 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: personaje_up-2
+      name: walk-2-u
       rect:
         serializedVersion: 2
-        x: 128
-        y: 640
-        width: 128
-        height: 128
+        x: 16
+        y: 80
+        width: 16
+        height: 16
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -301,13 +301,13 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: personaje_left-2
+      name: walk-2-r
       rect:
         serializedVersion: 2
-        x: 256
-        y: 640
-        width: 128
-        height: 128
+        x: 32
+        y: 80
+        width: 16
+        height: 16
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -322,13 +322,13 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: personaje_right-2
+      name: right-walk-2
       rect:
         serializedVersion: 2
-        x: 384
-        y: 640
-        width: 128
-        height: 128
+        x: 48
+        y: 80
+        width: 16
+        height: 16
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -343,13 +343,13 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: personaje_down-3
+      name: walk-3-d
       rect:
         serializedVersion: 2
         x: 0
-        y: 512
-        width: 128
-        height: 128
+        y: 64
+        width: 16
+        height: 16
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -364,13 +364,13 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: personaje_up-3
+      name: walk-3-u
       rect:
         serializedVersion: 2
-        x: 128
-        y: 512
-        width: 128
-        height: 128
+        x: 16
+        y: 64
+        width: 16
+        height: 16
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -385,13 +385,13 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: personaje_left-3
+      name: walk-3-r
       rect:
         serializedVersion: 2
-        x: 256
-        y: 512
-        width: 128
-        height: 128
+        x: 32
+        y: 64
+        width: 16
+        height: 16
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -406,13 +406,13 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: personaje_right-3
+      name: right-walk-3
       rect:
         serializedVersion: 2
-        x: 384
-        y: 512
-        width: 128
-        height: 128
+        x: 48
+        y: 64
+        width: 16
+        height: 16
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -427,13 +427,13 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: personaje_down-4
+      name: walk-4-d
       rect:
         serializedVersion: 2
         x: 0
-        y: 384
-        width: 128
-        height: 128
+        y: 48
+        width: 16
+        height: 16
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -448,13 +448,13 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: personaje_up-4
+      name: walk-4-u
       rect:
         serializedVersion: 2
-        x: 128
-        y: 384
-        width: 128
-        height: 128
+        x: 16
+        y: 48
+        width: 16
+        height: 16
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -469,13 +469,13 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: personaje_left-4
+      name: walk-4-r
       rect:
         serializedVersion: 2
-        x: 255
-        y: 384
-        width: 128
-        height: 128
+        x: 32
+        y: 48
+        width: 16
+        height: 16
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -490,13 +490,13 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: personaje_right-4
+      name: right-walk-4
       rect:
         serializedVersion: 2
-        x: 384
-        y: 384
-        width: 128
-        height: 128
+        x: 48
+        y: 48
+        width: 16
+        height: 16
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -511,13 +511,13 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: personaje_down-5
+      name: walk-5-d
       rect:
         serializedVersion: 2
         x: 0
-        y: 256
-        width: 128
-        height: 128
+        y: 32
+        width: 16
+        height: 16
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -532,13 +532,13 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: personaje_up-5
+      name: walk-5-u
       rect:
         serializedVersion: 2
-        x: 128
-        y: 256
-        width: 128
-        height: 128
+        x: 16
+        y: 32
+        width: 16
+        height: 16
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -553,13 +553,13 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: personaje_left-5
+      name: walk-5-r
       rect:
         serializedVersion: 2
-        x: 256
-        y: 256
-        width: 128
-        height: 128
+        x: 32
+        y: 32
+        width: 16
+        height: 16
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -574,13 +574,13 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: personaje_right-5
+      name: right-walk-5
       rect:
         serializedVersion: 2
-        x: 384
-        y: 256
-        width: 128
-        height: 128
+        x: 48
+        y: 32
+        width: 16
+        height: 16
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -595,13 +595,13 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: personaje_down-6
+      name: walk-6-d
       rect:
         serializedVersion: 2
         x: 0
-        y: 128
-        width: 128
-        height: 128
+        y: 16
+        width: 16
+        height: 16
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -616,13 +616,13 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: personaje_up-6
+      name: walk-6-u
       rect:
         serializedVersion: 2
-        x: 128
-        y: 128
-        width: 128
-        height: 128
+        x: 16
+        y: 16
+        width: 16
+        height: 16
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -637,13 +637,13 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: personaje_left-6
+      name: walk-6-r
       rect:
         serializedVersion: 2
-        x: 256
-        y: 128
-        width: 128
-        height: 128
+        x: 32
+        y: 16
+        width: 16
+        height: 16
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -658,13 +658,13 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: personaje_right-6
+      name: right-walk-6
       rect:
         serializedVersion: 2
-        x: 384
-        y: 128
-        width: 128
-        height: 128
+        x: 48
+        y: 16
+        width: 16
+        height: 16
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -679,13 +679,13 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: jump_1
+      name: jump
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 128
-        height: 128
+        width: 16
+        height: 16
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -700,13 +700,13 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: jump_2
+      name: jump-2
       rect:
         serializedVersion: 2
-        x: 128
+        x: 16
         y: 0
-        width: 128
-        height: 128
+        width: 16
+        height: 16
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -721,13 +721,13 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: jump_3
+      name: jump-3
       rect:
         serializedVersion: 2
-        x: 256
+        x: 32
         y: 0
-        width: 128
-        height: 128
+        width: 16
+        height: 16
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -745,10 +745,10 @@ TextureImporter:
       name: jump-4
       rect:
         serializedVersion: 2
-        x: 384
+        x: 48
         y: 0
-        width: 128
-        height: 128
+        width: 16
+        height: 16
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}

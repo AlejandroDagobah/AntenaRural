@@ -13,6 +13,8 @@ public class AntennaValues : MonoBehaviour
     [SerializeField] private float m_infectionTime;
     [SerializeField] private float m_buildTime;
 
+    [SerializeField] private GameObject m_virus;
+
     private Image m_bar;
     private Image m_buildProgress;
     private float m_timeLeft; 
@@ -48,6 +50,12 @@ public class AntennaValues : MonoBehaviour
     public void setIsInfected(bool isInfected)
     {
         m_isInfected = isInfected;
+        
+        if(!isInfected)
+        {
+            m_bar.fillAmount = 0;
+            m_virus.SetActive(false);
+        }
     }
 
     public bool getIsInfected()
@@ -87,6 +95,7 @@ public class AntennaValues : MonoBehaviour
                 m_isInfected = true;
                 m_isBeingInfected = false;
                 m_timeLeft = m_infectionTime;
+                m_virus.SetActive(true);
             }
         }
         else if (m_isBuilding)

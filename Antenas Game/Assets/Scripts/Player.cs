@@ -20,13 +20,13 @@ public class Player : MonoBehaviour
     float vertical;
     
     [SerializeField] 
-    GameObject antena;
-    
-    [SerializeField] 
-    GameObject buildBar;
+    GameObject m_buildBar;
 
-    GameObject Canvas;
+    [SerializeField] private GameObject m_antena;
 
+    GameObject m_Canvas;
+
+    Animator m_anim;
 
 
 
@@ -35,14 +35,18 @@ public class Player : MonoBehaviour
     {
      //   Canvas = 
         m_rb = GetComponent<Rigidbody2D>();
+        m_anim = GetComponent<Animator>();
     }
 
 
     // Update is called once per frame
     void Update() {
 
-          horizontal = Input.GetAxisRaw("Horizontal");
-          vertical = Input.GetAxisRaw("Vertical");  
+            horizontal = Input.GetAxisRaw("Horizontal");
+            vertical = Input.GetAxisRaw("Vertical");  
+            m_anim.SetFloat("Horizontal", horizontal);
+            m_anim.SetFloat("Vertical", vertical);
+
     }
     
     
@@ -70,16 +74,68 @@ public class Player : MonoBehaviour
                 
             if(Input.GetKey("space") && buildingPlace.tag == "BuildingPlace")
             {
-                    Antena antenaScript = buildingPlace.GetComponent<Antena>();
+                    
+                        AntennaValues bpScript = buildingPlace.GetComponent<BuildingPlace>().GetAntennaValues();
 
-                    if(antenaScript.m_isEmpty == false){
-                        Instantiate(antena, new Vector2(buildingPlace.transform.position.x, buildingPlace.transform.position.y), Quaternion.identity);    
-                        //Instantiate(buildBar, new Vector2(buildingPlace.transform.position.x, buildingPlace.transform.position.y), Quaternion.identity);    
+                        if(bpScript == null)
+                        {
+
                         
-                        antenaScript.m_isEmpty = true;
-                        m_buildPercentage += 10;
-                    }
 
+                            GameObject antena = Instantiate(m_antena, new Vector2(buildingPlace.transform.position.x, buildingPlace.transform.position.y), Quaternion.identity);    
+                            //Instantiate(buildBar, new Vector2(buildingPlace.transform.position.x, buildingPlace.transform.position.y), Quaternion.identity);    
+                            
+                            
+                            AntennaValues antenaScript = antena.GetComponent<AntennaValues>();
+
+
+                            buildingPlace.GetComponent<BuildingPlace>().SetAntennaValues(antenaScript);
+
+
+                            GameObject Alerta = buildingPlace.transform.Find("alert").gameObject;
+                            Alerta.SetActive(false);
+                        }else{
+                            bpScript.setIsInfected(false);
+                        }
+
+                        
+
+                      //  GameObject Viruses = buildingPlace.transform.Find("Viruses").gameObject;
+
+                        
+
+
+                         /* 
+                        antenaScript.m_isEmpty = false;
+                        m_buildPercentage += 10;
+/*
+
+                       
+*/
+
+
+
+
+                      //  antenaScript.setIsInfected(false);
+
+
+
+
+                         /* 
+                      if(antenaScript.m_hasVirus == true)
+                        {
+                            
+                            Debug.Log("Tiene Virus");
+                            /*
+                                antenaScript.Repair();
+                                if(antenaScript.m_hasVirus){
+                                Viruses.SetActive(true);    
+                                                  
+                        }else{
+                            Debug.Log("Antena en estado óptimo");
+                        }
+                         */ 
+                   
             }
 
         }
