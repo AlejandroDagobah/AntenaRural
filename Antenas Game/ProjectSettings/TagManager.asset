@@ -4,7 +4,12 @@
 TagManager:
   serializedVersion: 2
   tags:
+  - Antenna
+  - InfectedAntenna
+  - BuildImg
+  - ImfectionBar
   - BuildingPlace
+  - Building
   layers:
   - Default
   - TransparentFX
