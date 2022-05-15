@@ -8,18 +8,24 @@ public class PutAntena : MonoBehaviour
     [SerializeField] private GameObject m_antenna;
     [SerializeField] private int m_totalAntennas;
 
+    private List<GameObject> m_quads;
     private List<GameObject> m_antennas;
 
     // Start is called before the first frame update
     void Start()
     {
         m_antennas = new List<GameObject>();
+        m_quads = new List<GameObject>(GameObject.FindGameObjectsWithTag("Quad"));
 
         for (int i = 0; i < m_totalAntennas; ++i)
         {
+            int index = Random.Range(0, m_quads.Count - 1);
+
+            GameObject quad = m_quads[index];
             GameObject newAntenna = Instantiate(m_antenna);
 
-            positionateAntenna(newAntenna);
+            m_quads.Remove(quad);
+            positionateAntenna(newAntenna, quad);
             m_antennas.Add(newAntenna);
         }
     }
@@ -39,33 +45,27 @@ public class PutAntena : MonoBehaviour
 
     #region private
 
-    private void positionateAntenna(GameObject antenna)
+    private void positionateAntenna(GameObject antenna, GameObject quad)
     {
-        while (true)
-        {
-            float xPos = Random.Range(-9, 9);
-            float yPos = Random.Range(-4, 4);
-            int index;
+        RectTransform quadSize = quad.GetComponentInChildren<RectTransform>();
 
-            Vector3 pos = new Vector3(xPos, yPos, transform.position.z);
+        float quadWidth = quadSize.sizeDelta.x / 2;
+        float quadHeight = quadSize.sizeDelta.y / 2;
+        float quadXPos = quad.transform.position.x;
+        float quadYPos = quad.transform.position.y;
+        float xMinLimit = quadXPos - quadWidth;
+        float xMaxLimit = quadXPos + quadWidth;
+        float yMinLimit = quadYPos - quadHeight;
+        float yMaxLimit = quadYPos + quadHeight;
 
-            for (index = 0; index < m_antennas.Count; ++index)
-            {
-                Vector3 antennaPos = m_antennas[index].transform.position;
 
-                if (Vector3.Distance(antennaPos, pos) < 3.5)
-                {
-                    break;
-                }
-            }
+        float xPos = Random.Range(xMinLimit, xMaxLimit);
+        float yPos = Random.Range(yMinLimit, yMaxLimit);
 
-            if (index == m_antennas.Count)
-            {
-                antenna.transform.position = pos;
-                return;
-            }
+        Vector3 pos = new Vector3(xPos, yPos, transform.position.z);
 
-        }
+        antenna.transform.position = pos;
+
     }
 
     #endregion
