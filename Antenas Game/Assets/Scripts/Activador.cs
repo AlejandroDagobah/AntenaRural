@@ -47,15 +47,18 @@ public class Activador : MonoBehaviour
         Warning.SetActive(true);
     }
 
-    public void Play(){
-        SceneManager.LoadScene("Game");
+    public void Play()
+    {
+        SceneManager.LoadScene("Mapa");
     }
 
-    public void ReadName(){
+    public void ReadName()
+    {
        nameUser = nameInputField.text;
     }
 
-    public void WriteName(){
+    public void WriteName()
+    {
         nameText.text = nameUser;
     }
 }
