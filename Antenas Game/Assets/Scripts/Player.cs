@@ -11,6 +11,8 @@ public class Player : MonoBehaviour
     float m_MoveLimit = 0.7f;
 
     [SerializeField] 
+    float m_buildPercentage = 0;
+    [SerializeField] 
     Rigidbody2D m_rb;
     [SerializeField] 
     float horizontal; 
@@ -19,6 +21,11 @@ public class Player : MonoBehaviour
     
     [SerializeField] 
     GameObject antena;
+    
+    [SerializeField] 
+    GameObject buildBar;
+
+    GameObject Canvas;
 
 
 
@@ -26,6 +33,7 @@ public class Player : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+     //   Canvas = 
         m_rb = GetComponent<Rigidbody2D>();
     }
 
@@ -35,12 +43,6 @@ public class Player : MonoBehaviour
 
           horizontal = Input.GetAxisRaw("Horizontal");
           vertical = Input.GetAxisRaw("Vertical");  
-
-        if(Input.GetKeyDown("space"))
-        {
-            Instantiate(antena, new Vector2(transform.position.x, transform.position.y), Quaternion.identity);    
-        }    
-    
     }
     
     
@@ -58,16 +60,28 @@ public class Player : MonoBehaviour
 
     }
 
-       void OnCollisionEnter2D(Collision2D col)
+       void OnTriggerStay2D(Collider2D col)
         {
-            
-            Debug.Log(col, col.gameObject);     
+            GameObject buildingPlace = col.gameObject;
+                 
 
            // col.gameObject
+          
+                
+            if(Input.GetKey("space") && buildingPlace.tag == "BuildingPlace")
+            {
+                    Antena antenaScript = buildingPlace.GetComponent<Antena>();
 
+                    if(antenaScript.m_isEmpty == false){
+                        Instantiate(antena, new Vector2(buildingPlace.transform.position.x, buildingPlace.transform.position.y), Quaternion.identity);    
+                        //Instantiate(buildBar, new Vector2(buildingPlace.transform.position.x, buildingPlace.transform.position.y), Quaternion.identity);    
+                        
+                        antenaScript.m_isEmpty = true;
+                        m_buildPercentage += 10;
+                    }
 
-            
-            //GameObject other = col.gameObject;
+            }
+
         }
 
 }
