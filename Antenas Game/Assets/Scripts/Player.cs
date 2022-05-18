@@ -82,20 +82,35 @@ public class Player : MonoBehaviour
 
                         
 
-                            GameObject antena = Instantiate(m_antena, new Vector2(buildingPlace.transform.position.x, buildingPlace.transform.position.y), Quaternion.identity);    
-                            //Instantiate(buildBar, new Vector2(buildingPlace.transform.position.x, buildingPlace.transform.position.y), Quaternion.identity);    
-                            
+                            GameObject antena = Instantiate(m_antena, new Vector2(buildingPlace.transform.position.x, buildingPlace.transform.position.y), Quaternion.identity);                               
                             
                             AntennaValues antenaScript = antena.GetComponent<AntennaValues>();
 
+                            Collider2D[] collider2D = buildingPlace.GetComponents<Collider2D>();
+
+                            for (int i = 0; i < collider2D.Length; i++)
+                            {
+                                collider2D[i].isTrigger = true;
+                                
+                            }
 
                             buildingPlace.GetComponent<BuildingPlace>().SetAntennaValues(antenaScript);
 
-
                             GameObject Alerta = buildingPlace.transform.Find("alert").gameObject;
                             Alerta.SetActive(false);
+                            
+
+                          
+
+
+                       
                         }else{
-                            bpScript.setIsInfected(false);
+
+                              if(!bpScript.getIsBuilding()){
+                                
+                                bpScript.setIsInfected(false);
+                        
+                            }
                         }
 
                         

@@ -50,11 +50,17 @@ public class AntennaValues : MonoBehaviour
     public void setIsInfected(bool isInfected)
     {
         m_isInfected = isInfected;
-        
+        SpriteRenderer sprite = GetComponent<SpriteRenderer>();
+
+
         if(!isInfected)
         {
+            sprite.color = Color.white;
             m_bar.fillAmount = 0;
             m_virus.SetActive(false);
+        }else{
+            sprite.color = Color.red;
+            m_virus.SetActive(true);
         }
     }
 
@@ -80,7 +86,7 @@ public class AntennaValues : MonoBehaviour
 
     public bool getIsBuilding()
     {
-        return m_isBeingInfected;
+        return m_isBuilding;
     }
 
     private void countDownTimer()
@@ -95,7 +101,7 @@ public class AntennaValues : MonoBehaviour
                 m_isInfected = true;
                 m_isBeingInfected = false;
                 m_timeLeft = m_infectionTime;
-                m_virus.SetActive(true);
+                setIsInfected(m_isInfected);
             }
         }
         else if (m_isBuilding)
